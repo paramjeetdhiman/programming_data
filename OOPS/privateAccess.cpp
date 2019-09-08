@@ -5,14 +5,18 @@ class Human{
     private:
         int age;
         //we can only use it inside the class
+
+        int getAge(){
+            return age-5;
+        }
+        
     public:
         void displayAge(){
-            cout<<age <<endl; 
+            cout<< getAge()<<endl; 
         }
 
         void setAge(int value){
-            
-
+            age = value;
         }
 
 };
@@ -20,7 +24,8 @@ class Human{
 int main(){
     
     Human anil;
-    anil.age = 23;
+    anil.setAge(24);
+    anil.displayAge();
 
     return 0;
 }
